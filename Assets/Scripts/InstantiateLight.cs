@@ -31,15 +31,17 @@ public class InstantiateLight : MonoBehaviour
         lightSphereCollider = light.GetComponent<SphereCollider>();
         lightSphereCollider.radius = minimumRange;
 
-        // Instantiate Light at LightInstatiater_Handler position.
-        Instantiate(light, this.transform.position, Quaternion.identity);
-        // Add light to singletons
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Instantiate Light at LightInstatiater_Handler position.
+        Instantiate(light, this.transform.position, Quaternion.identity);
+
+        // Add light to GameManager Singleton
+        GameManager.Instance.addLight(light);
     }
 
     // Update is called once per frame
