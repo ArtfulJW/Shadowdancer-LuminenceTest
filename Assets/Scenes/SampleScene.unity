@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.37904903, g: 0.38905132, b: 0.37103462, a: 1}
+  m_IndirectSpecularColor: {r: 0.034686983, g: 0.024511274, b: 0.009147411, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7123124706574364134, guid: d632cff33ce44804f9c99133c308ffcd, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7123124706574364134, guid: d632cff33ce44804f9c99133c308ffcd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -181,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8208019944937331404, guid: d632cff33ce44804f9c99133c308ffcd, type: 3}
       propertyPath: minimumRange
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8208019944937331404, guid: d632cff33ce44804f9c99133c308ffcd, type: 3}
       propertyPath: lightIntensity
@@ -278,14 +278,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.00407475, y: -0.2588167, z: 0.0010918307, w: 0.9659173}
+  m_LocalRotation: {x: -0.1676069, y: -0.2545056, z: 0.047059093, w: 0.95127296}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0.483, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: -17.153, y: -31.551, z: 10.544}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4438803840994279088, guid: d632cff33ce44804f9c99133c308ffcd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7123124706574364134, guid: d632cff33ce44804f9c99133c308ffcd, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -436,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8208019944937331404, guid: d632cff33ce44804f9c99133c308ffcd, type: 3}
       propertyPath: minimumRange
-      value: 4
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8208019944937331404, guid: d632cff33ce44804f9c99133c308ffcd, type: 3}
       propertyPath: lightIntensity
@@ -592,7 +596,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2044038996713532473, guid: 4878819864aff7643999e9e773bebc0a, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2044038996713532473, guid: 4878819864aff7643999e9e773bebc0a, type: 3}
       propertyPath: m_LocalPosition.x

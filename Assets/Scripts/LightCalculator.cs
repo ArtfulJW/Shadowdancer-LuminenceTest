@@ -24,7 +24,7 @@ public class LightCalculator : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log(Mathf.InverseLerp(0,1, calculateBrightness(light, other.transform.position) - .24f));
+            Debug.Log(Mathf.InverseLerp(0,1, calculateBrightness(light, other.transform.position)));
         }
     }
 

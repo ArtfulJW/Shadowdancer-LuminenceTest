@@ -28,17 +28,17 @@ public class InstantiateLight : MonoBehaviour
 
     private void Awake()
     {
-        light.range = minimumRange;
-        light.intensity = minimumRange;
-        lightSphereCollider = light.GetComponent<SphereCollider>();
-        lightSphereCollider.radius = minimumRange;
-
 
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        light.range = minimumRange;
+        light.intensity = minimumRange;
+        lightSphereCollider = light.GetComponent<SphereCollider>();
+        lightSphereCollider.radius = minimumRange;
+
         // Instantiate Light at LightInstatiater_Handler position.
         // Save reference to instantiated GameObject<Light>
         light = Instantiate(light, this.transform.position, Quaternion.identity);

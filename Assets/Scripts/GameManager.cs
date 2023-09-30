@@ -48,12 +48,17 @@ public class GameManager : MonoBehaviour
         _Lights.Add(inputLight);
 
         Debug.Log("========== Number of Lights in Level: " + _Lights.Count);
-        for(int i = 0; i < _Lights.Count; i++)
+        //printLightsList();
+
+    }
+
+    private void printLightsList()
+    {
+        for (int i = 0; i < _Lights.Count; i++)
         {
             Debug.Log(_Lights[i].GetInstanceID());
         }
         Debug.Log("====================");
-
     }
 
 }
