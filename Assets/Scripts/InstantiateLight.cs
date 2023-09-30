@@ -21,6 +21,8 @@ public class InstantiateLight : MonoBehaviour
 
     SphereCollider lightSphereCollider;
 
+    GameObject instantiatedPrefab;
+
     [SerializeField]
     float minimumRange;
 
@@ -38,7 +40,8 @@ public class InstantiateLight : MonoBehaviour
     void Start()
     {
         // Instantiate Light at LightInstatiater_Handler position.
-        Instantiate(light, this.transform.position, Quaternion.identity);
+        // Save reference to instantiated GameObject<Light>
+        light = Instantiate(light, this.transform.position, Quaternion.identity);
 
         // Add light to GameManager Singleton
         GameManager.Instance.addLight(light);
