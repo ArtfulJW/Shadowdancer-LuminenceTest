@@ -24,7 +24,15 @@ public class LightCalculator : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log(Mathf.InverseLerp(0,1, calculateBrightness(light, other.transform.position)));
+            Ray ray = new Ray(transform.position, calculateDirection(transform.position, other.transform.position));
+            RaycastHit raycastHit;
+            Physics.Raycast(ray, out raycastHit);
+
+            if (raycastHit.collider.gameObject.tag == "Player")
+            {
+                Debug.DrawLine(transform.position, other.transform.position, Color.red);
+                Debug.Log(Mathf.InverseLerp(0, 1, calculateBrightness(light, other.transform.position)));
+            }
         }
     }
 
@@ -53,6 +61,19 @@ public class LightCalculator : MonoBehaviour
     public float calcDistFromLight(Vector3 LightPosition, Vector3 GivenPosition)
     {
         return (Vector3.Distance(GivenPosition, LightPosition)/light.range);
+    }
+
+    public RaycastHit raycastCheck(Ray ray, Collider other)
+    {
+        ray = new Ray(this.transform.position, other.transform.position);
+        RaycastHit hit;
+        Physics.Raycast(ray, out hit);
+        return hit;
+    }
+    
+    public Vector3 calculateDirection(Vector3 pointA, Vector3 pointB)
+    {
+        return (pointB - pointA).normalized;
     }
 
 }
