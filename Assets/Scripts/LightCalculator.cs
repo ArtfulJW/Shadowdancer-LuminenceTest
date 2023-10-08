@@ -17,7 +17,27 @@ public class LightCalculator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        /* 
+         * Testing API Call (GameManager.removeLight), employing loose coupling such that player can call however they like
+         * Remove testing Feature after Player is capable to sending API Call to Remove a light.
+         * Testing Conclusion: Feature works as expected.
+         */
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Please Remove LightID: " + GameManager.Instance.getLights()[0].gameObject.GetInstanceID().ToString());
+            GameManager.Instance.removeLight(GameManager.Instance.getLights()[0]);
+        }
+
+        /* 
+         * Testing API Call (GameManager.disableLight), employing loose coupling such that player can call however they like
+         * Remove testing Feature after Player is capable to sending API Call to Disable a light.
+         * Testing Conclusion: Feature works as expected.
+         */
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Please Disable LightID: " + GameManager.Instance.getLights()[0].gameObject.GetInstanceID().ToString());
+            GameManager.Instance.disableLight(GameManager.Instance.getLights()[0]);
+        }
     }
 
     private void OnTriggerStay(Collider other)

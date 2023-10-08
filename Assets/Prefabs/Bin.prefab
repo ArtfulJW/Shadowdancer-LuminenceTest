@@ -120,6 +120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light_Instantiater
       objectReference: {fileID: 0}
+    - target: {fileID: 5364037436266607206, guid: 55d9afe16674ffd49a2484536d8925ae, type: 3}
+      propertyPath: instantiatedPrefab
+      value: 
+      objectReference: {fileID: 7022450784348330658, guid: 2afb6a33f4e1dac4295501cc0da7c47c, type: 3}
     - target: {fileID: 7976786614304838056, guid: 55d9afe16674ffd49a2484536d8925ae, type: 3}
       propertyPath: m_RootOrder
       value: 0

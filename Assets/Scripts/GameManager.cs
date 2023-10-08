@@ -61,4 +61,26 @@ public class GameManager : MonoBehaviour
         Debug.Log("====================");
     }
 
+    /*
+     * Removes the given gameObject from the _Lights List.
+     * Arguments:
+     * Light
+     */
+    public void removeLight(Light inputLight)
+    {
+        Debug.Log("Removing LightID: " + inputLight.gameObject.GetInstanceID().ToString());
+        Destroy(inputLight.gameObject);
+        _Lights.Remove(inputLight);
+    }
+
+    public void disableLight(Light inputLight)
+    { 
+        inputLight.gameObject.GetComponent<Light>().enabled = false;
+    }
+
+    public List<Light> getLights()
+    {
+        return _Lights;
+    }
+
 }
